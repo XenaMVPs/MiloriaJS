@@ -6,7 +6,7 @@ Ofrece **Virtual DOM mejorado, reactividad avanzada, ciclo de vida de componente
 
 MiloriaJS es ideal para quienes buscan **rendimiento, simplicidad y flexibilidad**, sin configuraciones innecesarias.
 
-Official Doc: miloriajs.netlify.app
+Official Doc: https://miloriajs.netlify.app
 
 ---
 
