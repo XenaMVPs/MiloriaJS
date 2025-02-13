@@ -1,35 +1,36 @@
-<!-- index.html - Documentación Oficial de MiloriaJS Mejorada -->
+<!-- index.html - Documentación Oficial Avanzada de MiloriaJS (Estilo Wiki) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>MiloriaJS - Documentación Oficial</title>
+  <title>MiloriaJS - Documentación Oficial Avanzada</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Encabezado Superior con degradado y efecto sutil -->
+  <!-- Encabezado Superior con estilo Wiki Doc -->
   <header class="top-header">
     <div class="branding">
       <h1>MiloriaJS Framework</h1>
       <p>
-        El framework avanzado para resolver la complejidad del desarrollo web moderno:
-        reactividad, SSR simulado, partial hydration y enrutamiento isomórfico
-        en un único archivo.
+        El framework integral para desarrollo web moderno: reactividad profunda, SSR simulado, partial hydration,
+        enrutamiento isomórfico, validación de props, animaciones avanzadas y mucho más, todo en un solo archivo.
       </p>
     </div>
   </header>
 
-  <!-- Barra lateral de navegación fija -->
+  <!-- Barra lateral de navegación estilo Wiki -->
   <aside class="sidebar">
     <nav>
       <ul>
         <li><a href="#introduccion">Introducción</a></li>
         <li><a href="#problemas">Problemas que Soluciona</a></li>
-        <li><a href="#instalacion">Instalación y Uso</a></li>
-        <li><a href="#ejemplo">Ejemplo de Uso</a></li>
+        <li><a href="#caracteristicas">Características Destacadas</a></li>
+        <li><a href="#instalacion">Instalación y Configuración</a></li>
+        <li><a href="#ejemplos">Ejemplos de Uso</a></li>
         <li><a href="#api">API Principal</a></li>
+        <li><a href="#comparacion">Comparativa con Otros Frameworks</a></li>
         <li><a href="#conclusion">Conclusión</a></li>
       </ul>
     </nav>
@@ -37,64 +38,145 @@
 
   <!-- Contenido Principal -->
   <main class="content">
+
+    <!-- INTRODUCCIÓN -->
     <section id="introduccion">
       <h2>Introducción</h2>
       <p>
-        MiloriaJS nace con el propósito de unificar
-        <strong>reactividad, componentes, enrutamiento, SSR simulado y optimizaciones</strong>
-        en un solo archivo: <em>miloria.js</em>. Con ello, se reduce la dependencia
-        de configuraciones externas y se simplifica notablemente el flujo de trabajo.
+        <strong>MiloriaJS</strong> se presenta como una alternativa moderna y
+        <em>muy optimizada</em> para construir aplicaciones web de alta complejidad
+        con un enfoque minimalista. Inspirado en la filosofía de Vue, React y Svelte,
+        MiloriaJS consolida en un único archivo ( <code>miloria.js</code> )
+        las funcionalidades esenciales para el desarrollo de frontends profesionales:
+        <strong>Virtual DOM mejorado</strong>, <strong>reactividad profunda</strong>,
+        <strong>ciclo de vida de componentes</strong>, enrutamiento isomórfico con
+        lazy loading, SSR simulado, <em>partial hydration</em>,
+        <strong>gestion de estado global</strong> y muchísimo más.
+      </p>
+      <p>
+        Nuestro objetivo es claro: ofrecer un <strong>flujo de trabajo simple y escalable</strong>
+        en un solo archivo, para evitar la proliferación de herramientas externas.
       </p>
     </section>
 
+    <!-- PROBLEMAS QUE SOLUCIONA -->
     <section id="problemas">
       <h2>Problemas que Soluciona</h2>
       <ul>
-        <li><strong>Complejidad creciente:</strong> Agrupa en un único sitio las funciones de reactividad,
-          enrutamiento y SSR para evitar configuraciones dispersas.</li>
-        <li><strong>Rendimiento y reactividad:</strong> Emplea un sistema avanzado
-          (<em>computed, watch, deepWatch</em>) que minimiza renders innecesarios.</li>
-        <li><strong>Enrutamiento isomórfico:</strong> Navegación con History API y SSR simulado en un único
-          flujo continuo.</li>
-        <li><strong>Partial Hydration:</strong> Hidrata solo lo que se requiere, acelerando la carga de
-          páginas con contenido estático.</li>
-        <li><strong>Sistema de plugins:</strong> Ofrece flexibilidad para extender la funcionalidad sin
-          complicar tu código base.</li>
+        <li>
+          <strong>Configuraciones complicadas:</strong>
+          Al integrar la <em>reactividad, enrutamiento, SSR y animaciones</em> en un solo archivo,
+          MiloriaJS elimina la necesidad de configuraciones externas o múltiples dependencias.
+        </li>
+        <li>
+          <strong>Re-renderizados excesivos:</strong>
+          Gracias al <em>Virtual DOM mejorado</em> y al sistema de <em>trackeo profundo</em>,
+          se minimizan los re-renderizados. La reactividad está diseñada para ser eficiente
+          incluso en apps de mediano y gran tamaño.
+        </li>
+        <li>
+          <strong>Arquitecturas dispersas:</strong>
+          Al contar con un <em>sistema de módulos internos</em>, un <em>EventBus</em> global
+          y un <em>Store Avanzado</em> con middlewares y persistencia, tu lógica se encuentra
+          centralizada y bien organizada.
+        </li>
+        <li>
+          <strong>Falta de escalabilidad:</strong>
+          Soporta <em>mixins</em>, <em>extends</em>, <em>validación de props</em> y
+          <em>plugins</em>, asegurando que tu proyecto crezca sin volverse inmanejable.
+        </li>
+        <li>
+          <strong>Necesidad de SSR y optimizaciones:</strong>
+          Con <em>SSR simulado</em> y <em>partial hydration</em>, MiloriaJS mejora la primera
+          carga y el SEO, sin requerir un setup complejo.
+        </li>
+        <li>
+          <strong>Enrutamiento asíncrono e isomórfico:</strong>
+          El <em>lazy loading</em> (o code splitting simulado) evita cargar todos
+          los componentes al inicio, mejorando los tiempos de arranque de la aplicación.
+        </li>
+        <li>
+          <strong>Animaciones y transiciones limitadas:</strong>
+          Con <em>animate</em>, <em>animateAdvanced</em> y <em>transitionComponent</em>, se pueden
+          crear interacciones de alto nivel sin librerías externas.
+        </li>
+        <li>
+          <strong>Falta de herramientas Dev:</strong>
+          MiloriaJS incluye logs avanzados, <em>devTools</em> y un <em>modo debug</em> para mejorar
+          la experiencia de desarrollo, además de un sistema inicial de <em>HMR (Hot Module Replacement)</em>
+          simulado.
+        </li>
       </ul>
     </section>
 
-    <section id="instalacion">
-      <h2>Instalación y Uso</h2>
+    <!-- CARACTERÍSTICAS DESTACADAS -->
+    <section id="caracteristicas">
+      <h2>Características Destacadas</h2>
       <ol>
-        <li>
-          <strong>Descarga</strong> el archivo <code>miloria.js</code> y colócalo en la carpeta de tu proyecto.
-        </li>
-        <li>
-          <strong>Incluye</strong> la siguiente línea antes de cerrar <code>&lt;/body&gt;</code> en tu HTML:
-          <pre><code>&lt;script src="miloria.js"&gt;&lt;/script&gt;</code></pre>
-        </li>
-        <li>
-          <strong>Inicia</strong> tu aplicación definiendo componentes con
-          <code>Miloria.defineComponent</code> y registrando rutas con <code>Miloria.router</code>.
-        </li>
+        <li><strong>Virtual DOM más robusto:</strong> Soporte de <code>key</code> y un algoritmo
+          de <em>diff</em> avanzado para reducir renders innecesarios.</li>
+        <li><strong>Reactividad mejorada:</strong> Trackeo profundo de dependencias,
+          <em>computed</em>, <em>watch</em>, <em>deepWatch</em>, <em>advancedComputed</em> y
+          <em>error boundaries</em> integrados.</li>
+        <li><strong>Sistema de Componentes enriquecido:</strong> Hooks completos
+          (<code>onBeforeMount</code>, <code>onMount</code>, <code>onBeforeUpdate</code>,
+          <code>onUpdate</code>, <code>onBeforeUnmount</code>, <code>onUnmount</code>),
+          mixins, extends y validación de props.</li>
+        <li><strong>Enrutamiento Isomórfico Avanzado:</strong> Rutas dinámicas,
+          lazy loading y middlewares para proteger rutas o ejecutar lógica previa.</li>
+        <li><strong>SSR Simulado y Partial Hydration:</strong> Ideal para mejorar SEO y acelerar
+          la carga inicial sin configuraciones complejas.</li>
+        <li><strong>Store Global Avanzado:</strong> Soporta módulos, middlewares y persistencia
+          local o remota (<code>createStoreAdvanced</code>).</li>
+        <li><strong>Animaciones y Transiciones:</strong> API de animaciones (<code>animate</code>,
+          <code>animateAdvanced</code>) y <em>transitionComponent</em> para un UX enriquecido.</li>
+        <li><strong>Plugins y Hooks Globales:</strong> Extiende la funcionalidad de tu app
+          con facilidad (<code>registerPlugin</code>, <code>usePlugins</code>, hooks <em>beforeRender</em>,
+          <em>afterRender</em>, etc.).</li>
+        <li><strong>DevTools, Logging y Modo Debug:</strong> Logs detallados, warnings y errors,
+          además de un modo <em>debug</em> para diagnosticar problemas sin complicaciones.</li>
+        <li><strong>HMR Simulado:</strong> Permite forzar remount de componentes y simular
+          recargas en caliente para mejorar la experiencia de desarrollo.</li>
       </ol>
     </section>
 
-    <section id="ejemplo">
-      <h2>Ejemplo de Uso</h2>
+    <!-- INSTALACIÓN Y CONFIGURACIÓN -->
+    <section id="instalacion">
+      <h2>Instalación y Configuración</h2>
       <p>
-        En el siguiente ejemplo definimos dos componentes para las rutas <code>/</code> y <code>/about</code>.
-        El contenedor <code>#app</code> es donde se montará la aplicación principal:
+        <strong>MiloriaJS</strong> se integra a tu proyecto de manera muy sencilla. Solo sigue los pasos:
       </p>
-      <pre><code data-type="text">
-/* EJEMPLO (main.js por ejemplo) */
+      <ol>
+        <li>
+          <strong>Descarga</strong> el archivo <code>miloria.js</code> (o clona el repositorio).
+        </li>
+        <li>
+          <strong>Inclúyelo</strong> en tu HTML:
+          <pre><code>&lt;script src="miloria.js"&gt;&lt;/script&gt;</code></pre>
+        </li>
+        <li>
+          <strong>Configura</strong> la aplicación si lo requieres. Por ejemplo, puedes activar el modo debug:
+          <pre><code>Miloria.config.set({ debug: true });</code></pre>
+        </li>
+        <li>
+          <strong>Inicia</strong> tu app definiendo componentes, rutas o creando tu store global según tus necesidades.
+        </li>
+      </ol>
+      <p>
+        Eso es todo. MiloriaJS <em>no necesita</em> herramientas externas ni complicados sistemas de bundling.
+      </p>
+    </section>
 
-// Importamos funciones de Miloria
-const { defineComponent, reactive, watch, onMount, router } = Miloria;
+    <!-- EJEMPLOS DE USO -->
+    <section id="ejemplos">
+      <h2>Ejemplos de Uso</h2>
 
-// Definimos un componente Home
-const HomeComponent = defineComponent({
-  name: "HomeComponent",
+      <h3>1. Definir Componente con Reactividad</h3>
+      <pre><code>
+const { defineComponent, reactive, onMount, watch } = Miloria;
+
+const MyCounter = defineComponent({
+  name: "MyCounter",
   setup() {
     const state = reactive({ contador: 0 });
 
@@ -103,84 +185,188 @@ const HomeComponent = defineComponent({
     }
 
     onMount(() => {
-      console.log("HomeComponent montado");
+      console.log("MyCounter montado en el DOM");
     });
 
     watch(() => state.contador, (nuevo, viejo) => {
-      console.log("El contador cambió de", viejo, "a", nuevo);
+      console.log("Contador cambió de", viejo, "a", nuevo);
     });
 
-    return () => `
-      <div class="home-component">
-        <h2>Bienvenido a MiloriaJS</h2>
-        <p>Contador: ${state.contador}</p>
-        <button onclick="incrementar()">Incrementar</button>
-        <button onclick="Miloria.router.navigate('/about')">Ir a About</button>
-      </div>
-    `;
+    return () => Miloria.h("div", null,
+      Miloria.h("h3", null, "Contador: " + state.contador),
+      Miloria.h("button", { onclick: incrementar }, "Incrementar")
+    );
   }
 });
-
-// Definimos un componente About
-const AboutComponent = defineComponent({
-  name: "AboutComponent",
-  setup() {
-    return () => `
-      <div class="about-component">
-        <h2>Acerca de MiloriaJS</h2>
-        <p>Integra reactividad, SSR, partial hydration y rutas en un solo archivo.</p>
-        <button onclick="Miloria.router.navigate('/')">Volver a Home</button>
-      </div>
-    `;
-  }
-});
-
-// Registramos rutas
-router.register("/", HomeComponent);
-router.register("/about", AboutComponent);
-
-// Iniciamos el router con el contenedor #app
-router.init("#app");
       </code></pre>
-      <p>
-        De esta forma, navegar a <strong>/</strong> o <strong>/about</strong> no recarga la página
-        y cada ruta corresponde a un componente diferente.
-      </p>
+
+      <h3>2. Montar un Componente</h3>
+      <pre><code>
+Miloria.mountComponent("MyCounter", document.getElementById("app"));
+      </code></pre>
+
+      <h3>3. Uso de Enrutamiento Isomórfico con Lazy Loading</h3>
+      <pre><code>
+// Rutas principales
+Miloria.router.register("/", "HomeComponent");
+Miloria.router.register("/about", "AboutComponent", {
+  loader: () =&gt; import("./about.js").then(m => m.default) // Ejemplo de lazy load
+});
+
+Miloria.router.setNotFound("NotFoundComponent");
+Miloria.router.init("#app");
+      </code></pre>
+
+      <h3>4. SSR Simulado</h3>
+      <pre><code>
+const mySSR = Miloria.ssr({ templateCache: true });
+const htmlString = mySSR("MyCounter", { someProp: "valor" });
+console.log("Resultado SSR:", htmlString);
+      </code></pre>
+
+      <h3>5. Store Avanzado con Persistencia Local</h3>
+      <pre><code>
+const store = Miloria.createStoreAdvanced(
+  { user: "Desconocido" },
+  {
+    persistKey: "miAppState",
+    modules: {
+      auth: {
+        state: { token: null },
+        mutations: {
+          setToken(state, payload) {
+            state.token = payload;
+          }
+        }
+      }
+    }
+  }
+);
+
+// Uso de commit con modules
+store.commit("auth/setToken", "ABC123XYZ");
+console.log(store.state.auth.token); // "ABC123XYZ"
+      </code></pre>
     </section>
 
+    <!-- API PRINCIPAL -->
     <section id="api">
       <h2>API Principal Resumida</h2>
       <ul>
-        <li><code>Miloria.defineComponent({ name, setup })</code> — Crea un nuevo componente.</li>
-        <li><code>Miloria.reactive(obj)</code> — Convierte un objeto en reactivo.</li>
-        <li><code>Miloria.watch(getter, callback)</code> — Observa cambios sobre un getter.</li>
-        <li><code>Miloria.router.register(path, component)</code> — Registra rutas en el enrutador.</li>
-        <li><code>Miloria.ssr(config)</code> — Renderizado en servidor (simulado).</li>
-        <li><code>Miloria.hydrateOnly(selector)</code> — Hidrata solo la parte indicada del DOM.</li>
-        <li><code>Miloria.createStore(initialState)</code> — Crea un store global reactivo.</li>
-        <li><code>Miloria.registerPlugin(plugin)</code> — Permite extender el framework con plugins.</li>
+        <li><code>Miloria.defineComponent({ ... })</code> — Crea un componente con <em>setup</em>, <em>props</em>, etc.</li>
+        <li><code>Miloria.mountComponent("Componente", contenedor)</code> — Monta un componente en el DOM.</li>
+        <li><code>Miloria.reactive(obj)</code> — Convierte un objeto en <em>reactivo</em>.</li>
+        <li><code>Miloria.watch(getter, callback)</code> — Observa cambios de un <em>getter</em>.</li>
+        <li><code>Miloria.createStore(initialState)</code> o <code>Miloria.createStoreAdvanced(...)</code> — Crea un store global.</li>
+        <li><code>Miloria.router.register(path, component, opts)</code> — Registra rutas.</li>
+        <li><code>Miloria.ssr(config)</code> — Inicializa renderizado en servidor simulado.</li>
+        <li><code>Miloria.hydrateOnly(selector)</code> — Aplica partial hydration en un fragmento del DOM.</li>
+        <li><code>Miloria.registerPlugin(plugin)</code> — Añade funcionalidades extras al framework.</li>
+        <li><code>Miloria.animate(element, props, duration)</code>, <code>animateAdvanced(...)</code>, <code>transitionComponent(...)</code> — Animaciones y transiciones.</li>
+        <li><code>Miloria.validateData(schema, data)</code> — Validación genérica de datos.</li>
+        <li><code>Miloria.enableHMR()</code> — Activa HMR simulado para re-cargar componentes en caliente.</li>
+        <li><code>Miloria.config.set({ debug: true })</code> — Configura opciones globales como debug.</li>
       </ul>
+      <p>
+        Para más detalles, revisa el archivo <code>miloria.js</code> completo, donde encontrarás
+        comentarios y cada método documentado.
+      </p>
     </section>
 
+    <!-- COMPARACIÓN CON OTROS FRAMEWORKS -->
+    <section id="comparacion">
+      <h2>Comparativa con Otros Frameworks</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Framework</th>
+            <th>Velocidad</th>
+            <th>Ecosistema</th>
+            <th>Reactividad</th>
+            <th>Tamaño</th>
+            <th>Usabilidad</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>React (18.x)</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>9/10</td>
+          </tr>
+          <tr>
+            <td>Vue (3.x)</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>9/10</td>
+          </tr>
+          <tr>
+            <td>Svelte (4.x)</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐</td>
+            <td>8/10</td>
+          </tr>
+          <tr>
+            <td><strong>MiloriaJS</strong></td>
+            <td>⭐⭐⭐⭐</td>
+            <td>⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>⭐⭐⭐⭐</td>
+            <td><strong>8/10</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <strong>MiloriaJS</strong> ha evolucionado significativamente,
+        alcanzando un desempeño de <em>8/10</em>, muy cercano a los grandes
+        referentes. Gracias a su arquitectura de un solo archivo y un sistema
+        integral de funcionalidades, es perfecto para proyectos medianos, prototipos
+        o implementaciones donde la agilidad y la sencillez de configuración sean
+        prioritarias.
+      </p>
+    </section>
+
+    <!-- CONCLUSIÓN -->
     <section id="conclusion">
       <h2>Conclusión</h2>
       <p>
-        MiloriaJS te ofrece un enfoque integral para desarrollar aplicaciones modernas, robustas y fáciles de
-        mantener. Su énfasis en la reactividad y la modularidad hace que la experiencia de desarrollo sea
-        fluida y escalable.
+        MiloriaJS es una solución muy completa para afrontar los desafíos
+        del desarrollo web actual. Desde la reactividad y el manejo de estados
+        complejos hasta las transiciones y el SSR simulado, todo se integra de
+        forma coherente y minimalista.
       </p>
       <p>
-        Para más detalles, revisa <strong>miloria.js</strong> y explora la comunidad de MiloriaJS
-        para ver más ejemplos y plugins de contribución.
+        Si buscas un <em>framework ligero</em> pero a la vez <em>poderoso</em>, que te
+        permita ir escalando tu aplicación sin dolores de cabeza, <strong>MiloriaJS</strong>
+        es la apuesta perfecta. ¡Anímate a probarlo y descubre lo
+        simple que puede ser crear proyectos web de la más alta calidad!
+      </p>
+      <p>
+        <strong>¿Dudas?</strong> Explora el archivo <code>miloria.js</code>,
+        únete a la comunidad MiloriaJS y colabora con <em>plugins</em>,
+        <em>documentación</em> o simplemente compartiendo tus experiencias.
       </p>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div id="app"></div>
     <p>
-      © 2025 <strong>MiloriaJS</strong>. Inspirado en la fiabilidad de Milo.
-      Todos los derechos reservados.
+      © 2025 <strong>MiloriaJS</strong>. Todo en un único archivo, sin dependencias externas.
+      Inspirado en la fiabilidad de Milo. Todos los derechos reservados.
     </p>
     <!-- Cargamos nuestro framework -->
     <script src="miloria.js"></script>

@@ -1,4 +1,4 @@
-/* styles.css - Diseño moderno y mejorado con sidebar y encabezado degradado */
+/* styles.css - Diseño WikiDoc Moderno para MiloriaJS */
 
 /* --- RESET & TIPOGRAFÍA BÁSICA --- */
 * {
@@ -11,17 +11,17 @@
     background-color: #fafafa;
     color: #333;
     min-height: 100vh;
-    line-height: 1.5;
+    line-height: 1.6;
   }
   
   /* --- ENCABEZADO SUPERIOR CON GRADIENTE --- */
   .top-header {
     background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
     color: #f4f4f4;
-    padding: 2.5rem 1rem;
+    padding: 3rem 1rem;
     text-align: center;
     margin-bottom: 1.2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     position: relative;
   }
   .top-header::after {
@@ -32,31 +32,33 @@
     background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
   }
   .branding h1 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     margin-bottom: 0.5rem;
+    font-weight: 700;
   }
   .branding p {
-    max-width: 620px;
+    max-width: 700px;
     margin: 0 auto;
     color: #f0f0f0;
     font-size: 1rem;
   }
   
-  /* --- SIDEBAR DE NAVEGACIÓN FIJA --- */
+  /* --- SIDEBAR DE NAVEGACIÓN FIJA (Estilo Wiki) --- */
   .sidebar {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    width: 230px;
+    width: 240px;
     background: #fff;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
     box-shadow: 2px 0 6px rgba(0,0,0,0.1);
     overflow-y: auto;
     z-index: 999;
   }
   .sidebar nav ul {
     list-style: none;
+    margin-top: 1rem;
   }
   .sidebar nav li {
     margin-bottom: 1rem;
@@ -67,24 +69,26 @@
     color: #444;
     padding: 0.6rem 1rem;
     border-radius: 4px;
-    font-weight: 500;
+    font-weight: 600;
     transition: background 0.2s, color 0.2s;
+    border-left: 3px solid transparent;
   }
   .sidebar nav a:hover {
     background-color: #f3f3f3;
     color: #222;
+    border-color: #8e2de2;
   }
   
   /* --- CONTENIDO PRINCIPAL --- */
   .content {
-    margin-left: 230px; /* Espacio para el sidebar */
+    margin-left: 240px; /* Espacio para el sidebar */
     padding: 2rem 3rem;
-    max-width: 1000px;
+    max-width: 1100px;
   }
   .content section {
     background: #fff;
     margin-bottom: 2rem;
-    padding: 1.5rem 2rem;
+    padding: 1.8rem 2rem;
     border-radius: 6px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   }
@@ -93,21 +97,37 @@
     margin-bottom: 1rem;
     color: #4a00e0;
   }
-  .content p, .content li {
+  .content h3 {
+    font-size: 1.3rem;
+    margin: 1.2rem 0 0.8rem;
+    color: #666;
+  }
+  .content p,
+  .content li {
     margin-bottom: 1rem;
     color: #555;
+    line-height: 1.5;
   }
-  .content em, .content strong {
+  .content em,
+  .content strong {
     color: #222;
   }
   .content ul {
     list-style: disc inside;
     margin-left: 1.5rem;
+    margin-bottom: 1rem;
   }
   .content ol {
     list-style: decimal;
     margin-left: 1.5rem;
     margin-bottom: 1rem;
+  }
+  .content a {
+    color: #4a00e0;
+    text-decoration: underline;
+  }
+  .content a:hover {
+    text-decoration: none;
   }
   
   /* --- BLOQUES DE CÓDIGO --- */
@@ -127,28 +147,28 @@
     font-family: "Courier New", Courier, monospace;
     font-size: 0.95rem;
     display: block;
-    white-space: pre-wrap;
+    white-space: pre;
   }
   
-  /* --- COMPONENTES DE EJEMPLO (Home / About) --- */
-  .home-component, .about-component {
-    text-align: center;
+  /* --- TABLAS COMPARATIVAS --- */
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 1rem;
+    margin-bottom: 1rem;
   }
-  .home-component button, .about-component button {
-    margin: 0.5rem;
-    padding: 0.6rem 1.2rem;
+  .comparison-table thead tr {
     background: #8e2de2;
     color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.2s, transform 0.2s;
   }
-  .home-component button:hover, .about-component button:hover {
-    background: #6d24ab;
-    transform: translateY(-1px);
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  .comparison-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
   }
   
   /* --- FOOTER --- */
@@ -156,7 +176,7 @@
     margin-top: 2rem;
     text-align: center;
     background: #f0f0f0;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
     font-size: 0.9rem;
     color: #666;
     box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
